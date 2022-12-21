@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css2?family=Audiowide&family=Zilla+Slab:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Courier);
+
+:root {
+  --max-width: 1100px;
+  --font-mono: 
+  "Audiowide",
+  "Segoe UI", 
+  "Roboto", 
+  "Oxygen", 
+  "Ubuntu", 
+  "Cantarell", 
+  "Fira Sans", 
+  "Droid Sans", 
+  "Helvetica Neue", 
+  Arial, sans-serif;
+
+  --border-radius: 5;
+  
+  --white: white;
+  --black: black;
+  --gray: rgb(38, 38, 38);  --primary: rgb(200, 13, 169);
+  --secondary: rgb(48, 7, 200);
+  --tertiary: rgb(248, 0, 223);
+  --accent: rgb(0, 194, 252);
+
+  --tile-border: conic-gradient(
+    var(--black),
+    var(--secondary)
+  );
+
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--accent);
+  background: rgba(0, 0, 255, 0.5);
+  font-family: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

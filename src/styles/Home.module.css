@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css2?family=Courier);
+
+.displaybox {
+  text-align: center;
+  display: flex;
+  margin: 1rem 1.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  background: var(--gray);
+  padding: 1rem
+}
+
+.displaybox:hover{
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.gridimage {
+  margin-left: auto;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 2px solid var(--accent);
+}
+
+.gridimage:hover {
+  border: 2px solid var(--primary)
+}
+
+.grid {
+  width: 1000px;
+  top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(25%, auto));
+  max-width: 100%;
+  border: 2px solid var(--tile-border); 
+}
+
+.title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.title:hover {
+  color: var(--primary);
+}
+
+.description:hover {
+  color: var(--primary);
+}
+
+.description {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+.bottomdescription {
+  margin: 70px auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+.description:hover {
+  color: var(--primary);
+}
+
+.top {
+  width: 100%;
+}
+
+.blank {
+  margin: 0rem;
+}
+
+.parallax {
+  width: 100%;
+  overflow: hidden;
+}
+
+.linktitle {
+  font-size: 25;
+}
+
+.paragraph {
+  font-size: 10;
+}
+
+.logo {
+  text-align: center;
+}
+
