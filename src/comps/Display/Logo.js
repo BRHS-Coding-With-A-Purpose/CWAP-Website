@@ -1,10 +1,10 @@
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
 
-const Logo = () => {
+const Logo = ({width, height, src="/CWAP.png", className}) => {
     return (
-        <div className={styles.logo}>
-            <Image src="/CWAP.png" width={320} height={320} className={styles.gridimage}/>
+        <div className={className}>
+            <Image src={src} width={width} height={height} className={styles.gridimage}/>
         </div>
     )
 }

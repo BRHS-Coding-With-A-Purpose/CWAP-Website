@@ -7,7 +7,10 @@ const Description = () => {
                 Coding With A Purpose
             </h1>
             <h2 className={styles.description}>
-                Scroll For More!
+                |
+            </h2>
+            <h2 className={styles.description}>
+                \/
             </h2>
         </div>
     );

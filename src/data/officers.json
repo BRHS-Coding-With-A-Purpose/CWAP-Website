@@ -1,0 +1,52 @@
+[
+        {
+        "name": "Alan",
+        "position": "Idk",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Ayush",
+        "position": "President",
+        "description": "Hi everyone! My name is Ayush and I am the president of Coding With A Purpose. I have been in this club since freshman year, joining originally to gain experience in coding projects. This club has now grown to much more than just coding, I have met fascinating people, made lifelong experiences, and gotten to work on incredible meaningful projects. Outside of Coding With A Purpose, I am a member of Team 303 in FRC Robotics and Model UN. In my free time I enjoy listening to music and sleeping although I don’t get a lot.",
+        "images": [
+            "/codecode.jpg",
+            "/Officers/Ayush.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Alexander",
+        "position": "Code Developer",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Ethan",
+        "position": "Code Developer",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Aarnav",
+        "position": "Project Researcher",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        }
+    ]

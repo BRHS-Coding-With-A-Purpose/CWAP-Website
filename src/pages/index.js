@@ -5,13 +5,44 @@ import styles from '../styles/Home.module.css'
 import Displaybox from '../comps/Display/Displaybox'
 import Logo from '../comps/Display/Logo'
 import Description from '../comps/Display/Description'
-import styled from 'styled-components'
+import Footer from '../comps/Layout/Footer'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { AiFillCode, AiOutlinePhone, AiOutlineSmile, AiTwotoneCrown } from 'react-icons/ai';
+import { ParallaxProvider } from 'react-scroll-parallax'
+import { useState} from 'react'
+import ParallaxLayout from '../comps/Layout/ParallaxLayout'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const grid = [
+  {
+    title: "About",
+    href: "/About",
+    image: "/tech.jpg",
+    description: "What is our Mission?"
+  },
+  {
+    title: "Contact Us",
+    href: "/ContactUs",
+    image: "/contactus.jpg",
+    description: "Any Questions?"
+  },
+  {
+    title: "Projects",
+    href: "/Projects",
+    image: "/codecode.jpg",
+    description: "Cool stuff we do"
+  },
+  {
+    title: "Blog",
+    href: "/Blog",
+    image: "/blog.jpg",
+    description: "Interesting articles"
+  }
+]
+
+const Home = () => {
+
+  const [selected, setSelected] = useState(null);
 
   return (
     <>
@@ -23,9 +54,9 @@ export default function Home() {
       </Head>
       <main>
         <Parallax pages={2} className={styles.parallax}>
-          <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background.jpg)', backgroundSize: 'cover'}}/>
+          <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background4.avif)', backgroundSize: 'cover'}}/>
           <ParallaxLayer factor={0.5} offset={0.1} speed={0.5}>
-            <Logo/>
+            <Logo width={320} height={320} className={styles.biglogo}/>
             <Description/>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.5}>
@@ -33,15 +64,54 @@ export default function Home() {
               About Us...
             </h1>
             <div className={styles.grid}>
-                <Displaybox title="About" href="/About" src="/tech.jpg">What is our Mission?</Displaybox>
-                <Displaybox title="Contact Us" href="/ContactUs" src="/contactus.jpg">Any Questions?</Displaybox>
-                <Displaybox title="Projects" href="/Projects" src="/codecode.jpg">Cool stuff we do</Displaybox>
-                <Displaybox title="Blog" href="/Blog" src="/blog.jpg">Interesting articles</Displaybox>
+              
+            {grid.map((el) => {
+
+              if (!(selected == el.title))
+                  return (
+                  <Displaybox 
+                      title={el.title} 
+                      href={el.href} 
+                      src={el.image}
+                      key={el.title}
+                      onMouseEnter={() => setSelected(el.title)}
+                  >
+                      {el?.description}
+                  </Displaybox>
+                  )
+              else 
+                  return(
+                  <Displaybox 
+                      title={el.title} 
+                      href={el.href} 
+                      src={el.image}
+                      key={el.title}
+                      onMouseLeave={() => setSelected(null)}
+                      animate={{
+                          scale: [1, 1.25, 1.25 , 1, 1],
+                          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                      }}
+                  >
+                      {el?.description}
+                  </Displaybox>
+                  )
+              })}
             </div>
+            <Footer/>
           </ParallaxLayer>
-        </Parallax>
-        
+        </Parallax>     
       </main>
     </>
   )
 }
+
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <ParallaxProvider>
+        {page}
+    </ParallaxProvider>
+  )
+}
+
+export default Home;

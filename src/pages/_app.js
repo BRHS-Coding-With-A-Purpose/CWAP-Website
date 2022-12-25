@@ -1,13 +1,14 @@
 import '../styles/globals.css'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import Layout from '../comps/Layout/Layout'
+import { PAGES_MANIFEST } from 'next/dist/shared/lib/constants'
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
 
-  return (
-    <ParallaxProvider>
-      <Component {...pageProps} />
-    </ParallaxProvider>
-  );
+  const getLayout = Component.getLayout ||
+   ((page) => (<Layout>{page}</Layout>))
+
+  return getLayout(<Component {...pageProps} />);
 }
 
-export default MyApp
+export default MyApp;
