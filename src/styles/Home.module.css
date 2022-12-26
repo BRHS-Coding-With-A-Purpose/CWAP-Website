@@ -86,28 +86,6 @@
 
 }
 
-@media all and (max-width: 1200px) {
-  .officergrid {
-    grid-template-columns: repeat(2, minmax(25%, auto));
-  }
-
-  .displayboxcenter {
-    margin: 0rem 1.2rem;
-  }
-
-}
-
-@media all and (max-width: 600px) {
-  .grid {
-    margin: 0 auto;
-    grid-template-columns: repeat(1, minmax(50%, auto));
-  }
-
-  .description {
-    margin: 0px auto;
-  }
-}
-
 .title {
   margin-top: 60px;
   margin-bottom: 20px;
@@ -219,4 +197,35 @@
 .center {
   text-align: center;
 }
+
+@media all and (max-width: 1200px) {
+  .officergrid {
+    grid-template-columns: repeat(2, minmax(25%, auto));
+  }
+
+  .displayboxcenter {
+    margin: 0rem 1.2rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, minmax(50%, auto));
+  }
+
+  .displaybox {
+    margin: 0.5rem auto;
+  }
+
+  .bottomdescription {
+    margin: 0;
+  }
+
+  .navbartext {
+    margin: auto 7px;
+  }
+}
+
 
