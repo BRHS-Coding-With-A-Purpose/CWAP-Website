@@ -73,7 +73,7 @@ const About = () => {
 
             {matches => (
         <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
-            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundImage:'url(/background2.jpg)', backgroundSize: 'cover'}}/>
+            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.5}>
                 <NavBar/>

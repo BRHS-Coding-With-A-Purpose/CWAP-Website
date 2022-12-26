@@ -42,7 +42,7 @@ const ContactUs = () => {
 
     return(
         <Parallax pages={1.25} className={styles.parallax}>
-            <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background5.avif)', backgroundSize: 'cover'}}/>
+            <ParallaxLayer factor={1} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.5}>
                 <NavBar/>
