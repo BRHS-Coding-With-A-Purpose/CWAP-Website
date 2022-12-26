@@ -94,6 +94,18 @@
   .displayboxcenter {
     margin: 0rem 1.2rem;
   }
+
+}
+
+@media all and (max-width: 600px) {
+  .grid {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, minmax(50%, auto));
+  }
+
+  .description {
+    margin: 0px auto;
+  }
 }
 
 .title {
