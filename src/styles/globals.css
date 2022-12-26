@@ -79,3 +79,9 @@ h1:hover {
     color-scheme: dark;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 15px;
+  }
+}

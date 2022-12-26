@@ -12,7 +12,7 @@ import FullDisplay from "../comps/Display/FullDisplay"
 const projects = [
     {
         name: "Shitty Weather App",
-        description: "(Actually works tho)",
+        description: "(Actually works)",
         link: "https://HTML-Tags-Example.alanjiang1.repl.co",
         icon: "/ShittyWeather.png"
     },
@@ -30,7 +30,7 @@ const projects = [
     },
     {
         name: "More Projects Coming Soon!",
-        description: "Pls join our club pls",
+        description: "",
         link: "https://github.com/BRHS-Coding-With-A-Purpose",
         icon: "/GitHub.png"
     }
@@ -123,7 +123,7 @@ const OfficerGrid = styled.div`
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(25%, auto));
-    max-width: 100%;
+    max-width: 90%;
     border: 2px solid var(--tile-border); 
 
     @media all and (max-width: 1200px) {
@@ -134,7 +134,7 @@ const OfficerGrid = styled.div`
         margin-right: auto;
         display: grid;
         grid-template-columns: repeat(2, minmax(25%, auto));
-        max-width: 100%;
+        max-width: 90%;
         border: 2px solid var(--tile-border); 
     }
 

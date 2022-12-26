@@ -124,7 +124,7 @@ const OfficerGrid = styled.div`
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(25%, auto));
-    max-width: 100%;
+    max-width: 90%;
     border: 2px solid var(--tile-border); 
 
     @media all and (max-width: 1200px) {
@@ -135,7 +135,7 @@ const OfficerGrid = styled.div`
         margin-right: auto;
         display: grid;
         grid-template-columns: repeat(2, minmax(25%, auto));
-        max-width: 100%;
+        max-width: 90%;
         border: 2px solid var(--tile-border); 
     }
 

@@ -5,6 +5,7 @@ import NavBar from "../../comps/Layout/NavBar"
 import Footer from "../../comps/Layout/Footer"
 import Displaybox from "../../comps/Display/Displaybox"
 import styled from "styled-components"
+import { useMediaQuery } from 'react-responsive'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence} from 'framer-motion'
 import Media from 'react-media'
@@ -45,12 +46,12 @@ export const officers = [
 const alumni = [
     {
     name: "Sonia",
-    position: "President",
+    position: "Former President",
     image: "/CWAP.png"
     },
     {
     name: "Mahika",
-    position: "Vice President",
+    position: "Former Vice President",
     image: "/CWAP.png"
     }
     ]
@@ -61,10 +62,18 @@ const About = () => {
 
     const [selectedOfficer, setSelectedOfficer] = useState(null);
     const [selectedAlumni, setSelectedAlumni] = useState(null);
+    const increase = 0.5;
+
 
     return(
-        <Parallax pages={2} className={styles.parallax}>
-            <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background2.jpg)', backgroundSize: 'cover'}}/>
+        <Media queries={{
+            small: "(max-width: 599px)",
+            large: "(min-width: 600px)"
+        }}>
+
+            {matches => (
+        <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
+            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundImage:'url(/background2.jpg)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.5}>
                 <NavBar/>
@@ -121,7 +130,7 @@ const About = () => {
 
                 </OfficerGrid>
             </ParallaxLayer>
-            <ParallaxLayer factor={0.5} speed={0.1} offset={1.1}>
+            <ParallaxLayer factor={0.5} speed={0.1} offset={1.1 + matches.small*(increase+0.1)}>
                 <AboutDescription>
                     <h1 className={styles.topdescription}>
                         Alumni
@@ -166,10 +175,12 @@ const About = () => {
 
                 </OfficerGrid>
             </ParallaxLayer>
-            <ParallaxLayer factor={0.1} offset={1.9}>
+            <ParallaxLayer factor={0.1} offset={1.9 + matches.small*increase}>
                 <Footer/>
             </ParallaxLayer>
         </Parallax>
+        )}
+        </Media>
     )
 }
 
@@ -210,6 +221,11 @@ const OfficerGrid = styled.div`
         max-width: 100%;
         border: 2px solid var(--tile-border); 
     }
+
+    @media only screen and (max-width: 600px) {
+          grid-template-columns: repeat(1, minmax(50%, auto));
+          max-width: 95%;
+      }
 
 `
 
