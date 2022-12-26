@@ -44,6 +44,14 @@
   border: 4px solid var(--accent);
 }
 
+.projectimage {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border: 4px solid var(--accent);
+}
+
+
 .gridimage:hover {
   border: 4px solid var(--primary);
 }
@@ -76,14 +84,24 @@
 }
 
 .title {
+  width: 1500px;
+  max-width: 90%;
   margin-top: 60px;
   margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   font-size: 100px;
+  text-align: center;
+  border: 4px solid var(--accent);
+  border-radius: 10px;
+  background: var(--gray);
+  padding: 1rem;
 }
 
 .title:hover {
   color: var(--primary);
+  border-color: var(--primary);
 }
 
 .description:hover {

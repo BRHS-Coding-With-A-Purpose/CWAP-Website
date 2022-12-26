@@ -31,8 +31,7 @@ const NavBar = () => {
                                 className={styles.navbartext} 
                                 onMouseLeave={() => setSelected(null)}
                                 animate={{
-                                    scale: [1, 2, 2, 1, 1],
-                                    rotate: [0, 0, 20, -20, 20, -20, 0],
+                                    scale: [1, 1.5, 1.5, 1, 1],
                                     borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                                   }}
                                 >

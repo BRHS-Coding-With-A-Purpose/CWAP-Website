@@ -23,14 +23,14 @@ const projects = [
         icon: "/LinearRegressionThing.png"
     },
     {
-        name: "Restaurant Chooser",
+        name: "Restaurants",
         description: "You are what you eat",
         link: "https://replit.com/@alawnjr/Small-Business-Project#main.py",
         icon: "/RestaurantThing.png"
     },
     {
-        name: "More Projects Coming Soon!",
-        description: "",
+        name: "Coming Soon!",
+        description: "Pls join our club",
         link: "https://github.com/BRHS-Coding-With-A-Purpose",
         icon: "/GitHub.png"
     }
@@ -66,7 +66,7 @@ const Projects = () => {
                             href={el.link} 
                             src={el.icon} size={200} 
                             key={el.name}
-                            className={styles.gridimage}
+                            className={styles.projectimage}
                             onMouseEnter={() => setSelected(el.name)}
                         >
                             {el?.description}
@@ -80,7 +80,7 @@ const Projects = () => {
                             href={el.link} 
                             src={el.icon} size={200} 
                             key={el.name}
-                            className={styles.gridimage}
+                            className={styles.projectimage}
                             onMouseLeave={() => setSelected(null)}
                             animate={{
                                 scale: [1, 1.25, 1.25 , 1, 1],

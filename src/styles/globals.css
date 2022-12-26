@@ -29,6 +29,7 @@
   --secondary: rgb(48, 7, 200);
   --tertiary: rgb(248, 0, 223);
   --accent: rgb(0, 194, 252);
+  --magenta: rgba(0, 0, 255, 0.5);
 
   --tile-border: conic-gradient(
     var(--black),
@@ -46,7 +47,7 @@ body {
 
 body {
   color: var(--accent);
-  background: rgba(0, 0, 255, 0.5);
+  background: var(--black);
   font-family: var(--font-mono);
 }
 

@@ -41,7 +41,7 @@ const WordWrap = styled.p`
 
 const ImageWrapper = styled.div`
     text-align: center;
-    margin: 50px auto;
+    margin: 50px;
     border-radius: 10px;
 `
 
@@ -59,7 +59,7 @@ export const ContentWrapper = styled.div`
     border: 4px solid var(--accent);
     border-radius: 10px;
     background-color: rgba(38,38,38, 0.9);
-    height: 480px;
+    height: 400px;
 
     &:hover {
         border-color: var(--primary);
