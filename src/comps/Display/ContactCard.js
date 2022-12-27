@@ -56,7 +56,7 @@ const TextWrapper = styled.div`
 export const ContentWrapper = styled.div`
     text-align: center;
     margin: 4rem 1.2rem;
-    border: 4px solid var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 10px;
     background-color: rgba(38,38,38, 0.9);
     height: 400px;

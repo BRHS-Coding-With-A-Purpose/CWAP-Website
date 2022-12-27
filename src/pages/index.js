@@ -9,33 +9,35 @@ import Footer from '../comps/Layout/Footer'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { useState} from 'react'
+import NavBar from '../comps/Layout/NavBar'
 import ParallaxLayout from '../comps/Layout/ParallaxLayout'
+import { motion } from 'framer-motion'
+import { AiOutlinePhone, AiFillCode, AiOutlineLike, AiFillFileText } from 'react-icons/ai'
 
-const inter = Inter({ subsets: ['latin'] })
 
 const grid = [
   {
     title: "About",
     href: "/About",
-    image: "/tech.jpg",
+    image: AiOutlineLike,
     description: "What is our Mission?"
   },
   {
     title: "Contact Us",
     href: "/ContactUs",
-    image: "/contactus.jpg",
+    image: AiOutlinePhone,
     description: "Any Questions?"
   },
   {
     title: "Projects",
     href: "/Projects",
-    image: "/codecode.jpg",
+    image: AiFillCode,
     description: "Cool stuff we do"
   },
   {
     title: "Blog",
     href: "/Blog",
-    image: "/blog.jpg",
+    image: AiFillFileText,
     description: "Interesting articles"
   }
 ]
@@ -54,49 +56,54 @@ const Home = () => {
       </Head>
       <main>
         <Parallax pages={2} className={styles.parallax}>
-          <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background4.avif)', backgroundSize: 'cover'}}/>
+          <ParallaxLayer factor={1} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}>
+            <NavBar/>
+          </ParallaxLayer>
           <ParallaxLayer factor={0.5} offset={0.1} speed={0.5}>
-            <Logo width={320} height={320} className={styles.biglogo}/>
-            <Description/>
+            <Description>
+              Coding With A Purpose
+            </Description>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.5}>
-            <h1 className={styles.bottomdescription}>
-              About Us...
-            </h1>
-            <div className={styles.grid}>
-              
-            {grid.map((el) => {
+            <motion.div>
+              <h1 className={styles.bottomdescription}>
+                About Us
+              </h1>
+              <div className={styles.grid}>
+                
+              {grid.map((el) => {
 
-              if (!(selected == el.title))
-                  return (
-                  <Displaybox 
-                      title={el.title} 
-                      href={el.href} 
-                      src={el.image}
-                      key={el.title}
-                      onMouseEnter={() => setSelected(el.title)}
-                  >
-                      {el?.description}
-                  </Displaybox>
-                  )
-              else 
-                  return(
-                  <Displaybox 
-                      title={el.title} 
-                      href={el.href} 
-                      src={el.image}
-                      key={el.title}
-                      onMouseLeave={() => setSelected(null)}
-                      animate={{
-                          scale: [1, 1.25, 1.25 , 1, 1],
-                          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                      }}
-                  >
-                      {el?.description}
-                  </Displaybox>
-                  )
-              })}
-            </div>
+                if (!(selected == el.title))
+                    return (
+                    <Displaybox 
+                        title={el.title} 
+                        href={el.href} 
+                        Icon={el.image}
+                        key={el.title}
+                        onMouseEnter={() => setSelected(el.title)}
+                    >
+                        {el?.description}
+                    </Displaybox>
+                    )
+                else 
+                    return(
+                    <Displaybox 
+                        title={el.title} 
+                        href={el.href} 
+                        Icon={el.image}
+                        key={el.title}
+                        onMouseLeave={() => setSelected(null)}
+                        animate={{
+                            scale: [1, 1.25, 1.25 , 1, 1],
+                            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                        }}
+                    >
+                        {el?.description}
+                    </Displaybox>
+                    )
+                })}
+              </div>
+            </motion.div>
             <Footer/>
           </ParallaxLayer>
         </Parallax>     

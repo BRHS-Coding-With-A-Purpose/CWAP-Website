@@ -11,7 +11,7 @@ const NavBar = () => {
     const [selected, setSelected] = useState(null);
 
     return (
-        <div className={styles.navbar}>
+        <motion.div initial={{y: -70}} animate={{y: 0}} transition={{duration: 1, type:'tween', stiffness:40}} className={styles.navbar}>
             <Link href="/">
                 <Logo width={60} height={60} className={styles.navbarlogo}/>
             </Link>
@@ -41,7 +41,7 @@ const NavBar = () => {
                             </motion.a>
                         )
                 })}
-        </div>
+        </motion.div>
     );
 }
 
