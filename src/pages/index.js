@@ -12,8 +12,9 @@ import { useState} from 'react'
 import NavBar from '../comps/Layout/NavBar'
 import ParallaxLayout from '../comps/Layout/ParallaxLayout'
 import { motion } from 'framer-motion'
+import AboutUs from '../comps/Display/AboutUs'
 import { AiOutlinePhone, AiFillCode, AiOutlineLike, AiFillFileText } from 'react-icons/ai'
-
+import Mission from '../comps/Display/Mission'
 
 const grid = [
   {
@@ -55,56 +56,20 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Parallax pages={2} className={styles.parallax}>
-          <ParallaxLayer factor={1} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}>
-            <NavBar/>
+        <Parallax pages={3} className={styles.parallax}>
+          <ParallaxLayer factor={1} className={styles.top} style={{backgroundColor:'var(--black)', backgroundSize: 'cover'}}>
+            <NavBar Motion={true}/>
           </ParallaxLayer>
           <ParallaxLayer factor={0.5} offset={0.1} speed={0.5}>
             <Description>
               Coding With A Purpose
             </Description>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.5}>
-            <motion.div>
-              <h1 className={styles.bottomdescription}>
-                About Us
-              </h1>
-              <div className={styles.grid}>
-                
-              {grid.map((el) => {
-
-                if (!(selected == el.title))
-                    return (
-                    <Displaybox 
-                        title={el.title} 
-                        href={el.href} 
-                        Icon={el.image}
-                        key={el.title}
-                        onMouseEnter={() => setSelected(el.title)}
-                    >
-                        {el?.description}
-                    </Displaybox>
-                    )
-                else 
-                    return(
-                    <Displaybox 
-                        title={el.title} 
-                        href={el.href} 
-                        Icon={el.image}
-                        key={el.title}
-                        onMouseLeave={() => setSelected(null)}
-                        animate={{
-                            scale: [1, 1.25, 1.25 , 1, 1],
-                            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                        }}
-                    >
-                        {el?.description}
-                    </Displaybox>
-                    )
-                })}
-              </div>
-            </motion.div>
-            <Footer/>
+          <ParallaxLayer offset={1} speed={0.5} style={{backgroundColor:'var(--black)', backgroundSize: 'cover'}}>
+            <Mission/>
+          </ParallaxLayer>
+          <ParallaxLayer offset={2} speed={0.5}>
+            <AboutUs/>
           </ParallaxLayer>
         </Parallax>     
       </main>
@@ -115,7 +80,7 @@ const Home = () => {
 
 Home.getLayout = function getLayout(page) {
   return (
-    <ParallaxProvider>
+    <ParallaxProvider motion>
         {page}
     </ParallaxProvider>
   )

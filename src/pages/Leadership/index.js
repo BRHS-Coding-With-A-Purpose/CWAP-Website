@@ -57,6 +57,17 @@ const alumni = [
     ]
 
 
+const BoardAnimate = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1
+        }
+    }
+}
 
 const About = () => {
 
@@ -73,64 +84,59 @@ const About = () => {
 
             {matches => (
         <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
-            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
-            <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
+            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundColor:'var(--black)', backgroundSize: 'cover'}}/>
+            <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--black)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.5}>
-                <NavBar/>
+                <NavBar Motion/>
             </ParallaxLayer>
-            <ParallaxLayer factor={0.2} offset={0.1}> 
-                <AboutDescription>
-                    <Displaybox title="Our Story" href="/About" className={styles.displayboxcenter} textalign={styles.center}>
-                        Coding With A Purpose started off in 2020 and has been helping students of all levels learn programming.
-                    </Displaybox>
-                </AboutDescription>
+            <ParallaxLayer factor={1} offset={0.3}>
+                <motion.div variants={BoardAnimate} initial="hidden" animate="visible">
+                    <AboutDescription>
+                        <h1 className={styles.topdescription}>
+                            Leadership
+                        </h1>
+                    </AboutDescription>
+                    <OfficerGrid>
+
+                    {officers.map((el) => {
+
+                    if (!(selectedOfficer == el.name))
+                        return (
+                        <Displaybox 
+                            title={el.name} 
+                            position={el.position} 
+                            href={`/About/${el.name}`} 
+                            src={el.image} size={175} 
+                            key={el.name}
+                            onMouseEnter={() => setSelectedOfficer(el.name)}
+                        >
+                            {el?.description}
+                        </Displaybox>
+                        )
+                    else 
+                        return(
+                        <Displaybox 
+                            title={el.name} 
+                            position={el.position} 
+                            href={`/Leadership/${el.name}`} 
+                            src={el.image} size={175} 
+                            key={el.name}
+                            onMouseLeave={() => setSelectedOfficer(null)}
+                            animate={{
+                                scale: [1, 1.25, 1.25 , 1, 1],
+                                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                            }}
+                        >
+                            {el?.description}
+                        </Displaybox>
+                        )
+                    })}
+
+
+                    </OfficerGrid>
+                </motion.div>
             </ParallaxLayer>
-            <ParallaxLayer factor={1} speed={0.25} offset={0.3}>
-                <AboutDescription>
-                    <h1 className={styles.topdescription}>
-                        Leadership
-                    </h1>
-                </AboutDescription>
-                <OfficerGrid>
-
-                {officers.map((el) => {
-
-                if (!(selectedOfficer == el.name))
-                    return (
-                    <Displaybox 
-                        title={el.name} 
-                        position={el.position} 
-                        href={`/About/${el.name}`} 
-                        src={el.image} size={175} 
-                        key={el.name}
-                        onMouseEnter={() => setSelectedOfficer(el.name)}
-                    >
-                        {el?.description}
-                    </Displaybox>
-                    )
-                else 
-                    return(
-                    <Displaybox 
-                        title={el.name} 
-                        position={el.position} 
-                        href={`/About/${el.name}`} 
-                        src={el.image} size={175} 
-                        key={el.name}
-                        onMouseLeave={() => setSelectedOfficer(null)}
-                        animate={{
-                            scale: [1, 1.25, 1.25 , 1, 1],
-                            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                        }}
-                    >
-                        {el?.description}
-                    </Displaybox>
-                    )
-                })}
-
-
-                </OfficerGrid>
-            </ParallaxLayer>
-            <ParallaxLayer factor={0.5} speed={0.1} offset={1.1 + matches.small*(increase+0.1)}>
+            <ParallaxLayer factor={0.5} offset={1.1 + matches.small*(increase+0.1)}>
                 <AboutDescription>
                     <h1 className={styles.topdescription}>
                         Alumni

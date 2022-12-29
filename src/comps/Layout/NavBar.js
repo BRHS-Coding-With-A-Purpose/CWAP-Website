@@ -4,14 +4,31 @@ import Logo from '../Display/Logo'
 import Link from 'next/link'
 import { useState }  from 'react'
 
-const pages = [["About", "/About", 0], ["Contact Us", "/ContactUs", 1], ["Projects", "/Projects", 2], ["Blog", "/Blog", 3]]
+const pages = [["Leadership", "/Leadership", 0], ["Contact Us", "/ContactUs", 1], ["Projects", "/Projects", 2], ["Blog", "/Blog", 3]]
 
-const NavBar = () => {
+const isMotion = (Motion, page) => {
+
+    if (Motion)
+        return (
+            <motion.div initial={{y: -70}} animate={{y: 0}} transition={{duration: 1, type:'tween', stiffness:40}} className={styles.navbar}>
+                {page}
+            </motion.div>
+        )
+    else 
+        return (
+            <div className={styles.navbar}>
+                {page}
+            </div>
+        )
+}
+
+const NavBar = ({Motion}) => {
 
     const [selected, setSelected] = useState(null);
 
     return (
-        <motion.div initial={{y: -70}} animate={{y: 0}} transition={{duration: 1, type:'tween', stiffness:40}} className={styles.navbar}>
+        isMotion(Motion,
+        <>
             <Link href="/">
                 <Logo width={60} height={60} className={styles.navbarlogo}/>
             </Link>
@@ -41,7 +58,7 @@ const NavBar = () => {
                             </motion.a>
                         )
                 })}
-        </motion.div>
+        </>)
     );
 }
 

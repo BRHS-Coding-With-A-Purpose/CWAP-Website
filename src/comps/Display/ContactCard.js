@@ -9,7 +9,7 @@ import Media from 'react-media';
 
 const ContactCard = (props) => {
 
-  const {title, href="/", children, src, size=100, key, textalign, className, onMouseEnter, onMouseLeave, animate} = props;
+  const {title, href="/", children, src, size=100, key, textalign, className, onMouseEnter, onMouseLeave, animate, width, height} = props;
 
     return(
       <Media queries={{
@@ -19,15 +19,14 @@ const ContactCard = (props) => {
         {(matches) => (
         <motion.a href={href} layoutId={key} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} animate={animate}>
           <ContentWrapper>
-                <TextWrapper>
                   <h1 className={textalign}>
                     {title}
                   </h1>
                   <WordWrap>
                     {children}
                   </WordWrap>
-                  {src && <ImageWrapper><Image src={src} width={size - matches.small*50} height={size - matches.small*50} className={className}/></ImageWrapper>}
-                </TextWrapper>
+                  {(src && !width) && <StyledImage src={src} width={size - matches.small*50} height={size - matches.small*50} className={className}/>}
+                  {(src && width) && <StyledImage src={src} width={width - matches.small*50} height={height - matches.small*50} className={className}/>}
           </ContentWrapper>
         </motion.a>
         )}
@@ -39,27 +38,21 @@ const WordWrap = styled.p`
   overflow-wrap: break-word;
 `
 
-const ImageWrapper = styled.div`
-    text-align: center;
+const StyledImage = styled(Image)`
     margin: 50px;
     border-radius: 10px;
+    border: 1px solid var(--white);
+
 `
 
-const TextWrapper = styled.div`
-    text-align: center;
-
-    @media all and (max-width: 1200px) {
-        text-align: center;
-    }
-`
 
 export const ContentWrapper = styled.div`
-    text-align: center;
-    margin: 4rem 1.2rem;
-    border: 1px solid var(--accent);
+    margin: 1rem 1.2rem;
+    padding: 1rem;
+    border: 1px solid var(--gray);
     border-radius: 10px;
-    background-color: rgba(38,38,38, 0.9);
-    height: 400px;
+    background-color: var(--gray);
+    width: 350px;
 
     &:hover {
         border-color: var(--primary);
@@ -68,16 +61,15 @@ export const ContentWrapper = styled.div`
 
     @media all and (max-width: 1200px) {
 
-        height: 380px;
-        width: 320px;
+        width: 350px;
         margin: 1rem 1.2rem;
         display: grid;
         grid-template-columns: repeat(2, minmax(-5%, auto));
         max-width: 100%;
     }
 
-    @media all and (max-width: 1200px) {
-      height: 350px;
+    @media all and (max-width: 600px) {
+
       width: 320px;
       margin: 1rem 1.2rem;
       display: grid;

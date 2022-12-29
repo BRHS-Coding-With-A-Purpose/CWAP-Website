@@ -12,7 +12,7 @@ const Leadership = () => {
     const router = useRouter();
     const { name } = router.query;
     const [description, setDescription] = useState("");
-    const [ title, setTitle ] = useState("");
+    const [title, setTitle ] = useState("");
     const [position, setPosition] = useState("");
     const [images, setImages] = useState("");
 
@@ -35,15 +35,13 @@ const Leadership = () => {
     return(
         <div>
             <div className={styles.officerpage}>
-                <div className={styles.displayboxwrapper}>
                     <Displaybox title={`${title} - ${position}`}>
                         {description}
                     </Displaybox>
-                </div>
                 <div className={styles.imggrid}>
-                    <Image src={images[0]} width={300} height={300} className={styles.gridimage}/>
-                    <Image src={images[1]} width={300} height={300} className={styles.gridimage}/>
-                    <Image src={images[2]} width={300} height={300} className={styles.gridimage}/>
+                    <Image src={images[0]} width={250} height={250} className={styles.gridimage}/>
+                    <Image src={images[1]} width={250} height={250} className={styles.gridimage}/>
+                    <Image src={images[2]} width={250} height={250} className={styles.gridimage}/>
                 </div>
             </div>
         </div>

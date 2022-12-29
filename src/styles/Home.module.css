@@ -6,6 +6,7 @@
   border: 0px solid var(--accent);
   border-radius: 10px;
   background: var(--gray);
+  border: 1px solid var(--gray);
   padding: 1rem;
 }
 
@@ -23,6 +24,7 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   background-color: var(--gray);
+  border: 1px solid var(--gray);
 }
 
 .displayboxcenter:hover{
@@ -41,6 +43,7 @@
   margin-left: auto;
   margin-right: 1rem;
   border-radius: 5px;
+  border: 1px solid var(--gray);
   /*border: 1px solid var(--accent);*/
 }
 
@@ -57,7 +60,7 @@
 }
 
 .grid {
-  width: 1000px;
+  width: 800px;
   top: 10rem;
   margin-left: auto;
   margin-right: auto;
@@ -68,37 +71,24 @@
 }
 
 .imggrid {
-  width: 1000px;
+  width: 100%;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(33%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   max-width: 95%;
   border: 1px solid var(--tile-border); 
 }
 
 .officerpage {
+  width: 1000px;
+  max-width: 95%;
   margin: 70px auto;
 
 }
 
-.title {
-  width: 1200px;
-  max-width: 90%;
-  margin-top: 340px;
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  font-size: 100px;
-  text-align: center;
-  padding: 1rem;
-}
 
 .title:hover {
   color: var(--primary);
-  border-color: var(--primary);
 }
 
 .description:hover {
@@ -109,6 +99,7 @@
   margin: 10px auto;
   text-align: center;
   font-size: 60px;
+  border: 1px solid var(--gray);
 }
 
 .bottomdescription {
@@ -188,7 +179,6 @@
 
 .biglogo {
   border-radius: 5px;
-  border: 4px solid var(--accent);
 }
 
 .biglogo:hover {

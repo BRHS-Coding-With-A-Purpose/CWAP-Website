@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
+import Link from 'next/link'
 
 const Blog = () => {
     return (
@@ -7,5 +8,7 @@ const Blog = () => {
         <h1>We are working on it!</h1>
     </div>)
 }
+
+
 
 export default Blog;
