@@ -67,8 +67,6 @@ const blog = [
     }
 ]
 
-const displayBlog = blog.slice(0,1)
-
 const IntroAnimation = (isInView) => {
     return({
         hidden: {
@@ -173,7 +171,7 @@ const Mission = () => {
                 </motion.div>
                 <motion.div variants={PictureAnimation(isInView)} initial="hidden" animate="visible">
                     <Displaybox title="This is a picture of us" src='/ClubPicture.png' width={300} height={200}>
-                        Trust us we are cool people. We just don't have the budget for a camera.
+                        Trust us we are cool people. We just don&#39t have the budget for a camera.
                     </Displaybox>
                 </motion.div>
                 <motion.div variants={IntroAnimation2(isInView)} initial="hidden" animate="visible" ref={bottomref}>
