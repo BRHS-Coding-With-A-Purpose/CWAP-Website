@@ -42,19 +42,11 @@ const Projects = () => {
 
     return(
         <Parallax pages={1.25} className={styles.parallax}>
-            <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/background.jpg)', backgroundSize: 'cover'}}/>
-            <ParallaxLayer factor={0.25} className={styles.top} style={{backgroundColor:'var(--gray)', backgroundSize: 'cover'}}/>
+            <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
             <ParallaxLayer factor={0.5}>
                 <NavBar/>
             </ParallaxLayer>
-            <ParallaxLayer factor={0.2} offset={0.1}> 
-                <AboutDescription>
-                    <Displaybox title="Projects" href="/Projects" className={styles.displayboxcenter} textalign={styles.center}>
-                        Cool Stuff We have Done
-                    </Displaybox>
-                </AboutDescription>
-            </ParallaxLayer>
-            <ParallaxLayer factor={0.8} speed={0.5} offset={0.3}>
+            <ParallaxLayer factor={0.8} offset={0.3}>
                 <OfficerGrid>
  
                 {projects.map((el) => {

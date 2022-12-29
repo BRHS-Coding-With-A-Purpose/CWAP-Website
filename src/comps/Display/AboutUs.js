@@ -7,10 +7,10 @@ import { AiOutlinePhone, AiFillCode, AiOutlineLike, AiFillFileText } from 'react
 
 const grid = [
   {
-    title: "About",
-    href: "/About",
+    title: "Leadership",
+    href: "/Leadership",
     image: AiOutlineLike,
-    description: "What is our Mission?"
+    description: "Who are the officers?"
   },
   {
     title: "Contact Us",

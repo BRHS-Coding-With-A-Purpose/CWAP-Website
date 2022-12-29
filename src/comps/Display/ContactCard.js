@@ -36,12 +36,13 @@ const ContactCard = (props) => {
 
 const WordWrap = styled.p`
   overflow-wrap: break-word;
+  color: var(--initial-accent);
 `
 
 const StyledImage = styled(Image)`
     margin: 50px;
     border-radius: 10px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--gray);
 
 `
 

@@ -44,7 +44,7 @@ const BlogWrapper = styled.a`
     background: var(--gray);
     border: 1px solid var(--gray);
     padding: 1rem;
-    font-family: "Inter";
+    font-family: inherit;
 
     &:hover {
         border: 1px solid var(--primary);
@@ -53,17 +53,17 @@ const BlogWrapper = styled.a`
 `
 
 const StyledH1 = styled.h1`
-    font-size: 20;
-    margin-bottom: 0.5rem;
+    font-size: 22px;
+    margin-bottom: 0.2rem;
 `
 const StyledH3 = styled.h3`
     font-size: 17px;
-    margin: 0.5rem auto;
+    margin-bottom: 0.6rem;
     color: var(--initial-accent);
 `
 
 const StyledP = styled.p`
-    font-size: 14px;
+    font-size: 18px;
 `
 
 export default Blog; 

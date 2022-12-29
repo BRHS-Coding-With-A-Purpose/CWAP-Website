@@ -12,25 +12,54 @@ const Displaybox = (props) => {
 
     return(
         <motion.a href={href} layoutId={key} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} inital={initial} animate={animate} style={style} variants={variants} whileHover={whileHover}>
-          <div className={className}>
+          <StyledDiv>
               <div>
-                  <h1 className={textalign}>
+                  <StyledH1>
                     {title}
-                  </h1>
-                  <h3 className={textalign}>
+                  </StyledH1>
+                  <StyledH3>
                     {position}
-                  </h3>
-                  <p className={textalign}>
+                  </StyledH3>
+                  <StyledP>
                     {children}
-                  </p>
+                  </StyledP>
               </div>
             {(src && !width) && <Image src={src} width={size} height={size} className={styles.gridimage}/>}
             {(src && width) && <Image src={src} width={width} height={height} className={styles.gridimage}/>}
             {Icon && <Icon size={size} className={styles.icon}/>}
-          </div>
+          </StyledDiv>
         </motion.a>
     )
 }
+
+const StyledH3 = styled.h3`
+    font-size: 21px;
+`
+
+const StyledH1 = styled.h1`
+    font-size: 27px;
+    color: var(--initial-accent);
+`
+
+const StyledP = styled.p`
+    margin-top: 0.5rem;
+    font-size: 21px;
+
+`
+const StyledDiv = styled.div`
+    display: flex;
+    margin: 1rem 1.2rem;
+    border: 0px solid var(--accent);
+    border-radius: 10px;
+    background: var(--gray);
+    border: 1px solid var(--gray);
+    padding: 1rem;
+
+    &:hover{
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+`
 
 const StyledAnchor = styled(motion.a)`
     text-align: center;
