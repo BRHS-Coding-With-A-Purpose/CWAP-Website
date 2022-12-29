@@ -4,7 +4,6 @@ import styles from '../../styles/Home.module.css';
 import { motion } from 'framer-motion'
 import styled from 'styled-components';
 import { SocialsLink } from '../Layout/Footer';
-import { Stint_Ultra_Condensed } from '@next/font/google';
 
 
 const Displaybox = (props) => {

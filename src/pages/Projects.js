@@ -78,7 +78,7 @@ const Projects = () => {
                             title={el.name} 
                             position={el.position} 
                             href={el.link} 
-                            src={el.icon} size={200} 
+                            src={el.icon} size={200}
                             key={el.name}
                             className={styles.projectimage}
                             onMouseLeave={() => setSelected(null)}

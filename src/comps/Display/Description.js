@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { useInView } from 'framer-motion';
-//import Typed from 'react-typed'
+import Typed from 'react-typed'
 
 
 const DescriptionEnter = {
@@ -61,15 +61,6 @@ const Description = () => {
                 <StyledIndent>
                 {'>'}
                 </StyledIndent>
-                <StyledTitle>
-                With A Purpose
-                </StyledTitle>
-            </TitleWrapper>
-        </DescriptionWrapper>
-    );
-}
-
-/*
                 <StyledTyping
                     strings={[
                         "Coding",
@@ -82,14 +73,24 @@ const Description = () => {
                     typeSpeed={150}
                     backSpeed={100}
                     loop
-                />*/
-/*
+                />
+                <StyledTitle>
+                With A Purpose
+                </StyledTitle>
+            </TitleWrapper>
+        </DescriptionWrapper>
+    );
+}
+
+
+
+
 const StyledTyping = styled(Typed)`
     color: var(--initial-accent);
     font-size: 70px;
     margin-right: auto;
     margin-left: 1rem;
-`*/
+`
 const StyledTitle = styled(motion.h1)`
     font-size: 70px;
     margin-right: 14rem;

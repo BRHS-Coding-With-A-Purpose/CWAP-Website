@@ -17,7 +17,7 @@ const Footer = () => {
     );
 }
 
-const SocialsLink = ({Icon, href}) => {
+export const SocialsLink = ({Icon, href}) => {
     return (
         <Link href={href}>
             <Icon size={40} className={styles.icon}/>

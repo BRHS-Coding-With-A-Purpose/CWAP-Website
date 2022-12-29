@@ -141,7 +141,7 @@ const BottomAnimation = (bottomInView) => {
         },
         visible: {
             opacity: bottomInView ? 1 : 0,
-            Y: bottomInView ? 0 : -2000,
+            Y: bottomInView ? 0 : -300,
             transition: {
                 delay: 1,
                 duration: 2
@@ -171,7 +171,7 @@ const Mission = () => {
                 </motion.div>
                 <motion.div variants={PictureAnimation(isInView)} initial="hidden" animate="visible">
                     <Displaybox title="This is a picture of us" src='/ClubPicture.png' width={300} height={200}>
-                        Trust us we are cool people. We just don&#39t have the budget for a camera.
+                        Trust us we are cool people. We just dont have the budget for a camera.
                     </Displaybox>
                 </motion.div>
                 <motion.div variants={IntroAnimation2(isInView)} initial="hidden" animate="visible" ref={bottomref}>
@@ -199,13 +199,10 @@ const Mission = () => {
                     </StyledH1>
                     <BlogWrapper>
                             <Blog title="Shitty Weather App" author="" date="12/29/22" src="/ShittyWeather.png" href="https://HTML-Tags-Example.alanjiang1.repl.co">
-                                Actually Works
                             </Blog>
                             <Blog title="Linear Regression" author="" date="12/29/22" src="/LinearRegressionThing.png" href="https://replit.com/@HarnoorSingh4/Vaccine-prediction-data#main.py">
-                                Predicts Covid-19
                             </Blog>
                             <Blog title="Local Restaurants" author="" date="12/29/22" src="/RestaurantThing.png" href="https://replit.com/@alawnjr/Small-Business-Project#main.py">
-                                Gives food advice
                             </Blog>
                     </BlogWrapper>
                 </SectionWrapper>
