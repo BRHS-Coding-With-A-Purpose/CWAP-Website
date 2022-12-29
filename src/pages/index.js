@@ -57,7 +57,7 @@ const Home = () => {
       </Head>
       <main>
         <Parallax pages={3} className={styles.parallax}>
-          <ParallaxLayer factor={1} className={styles.top} style={{backgroundColor:'var(--black)', backgroundSize: 'cover'}}>
+          <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}>
             <NavBar Motion={true}/>
           </ParallaxLayer>
           <ParallaxLayer factor={0.5} offset={0.1} speed={0.5}>

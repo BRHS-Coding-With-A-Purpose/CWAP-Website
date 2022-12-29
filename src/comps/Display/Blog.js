@@ -20,9 +20,9 @@ const Blog = (props) => {
             <StyledH3>
             {author} | {date}
             </StyledH3>
-            <p>
+            <StyledP>
             {children}
-            </p>
+            </StyledP>
             {src && <StyledImage src={src} width={size} height={size}/>}
         </BlogWrapper>
     )
@@ -44,6 +44,7 @@ const BlogWrapper = styled.a`
     background: var(--gray);
     border: 1px solid var(--gray);
     padding: 1rem;
+    font-family: "Inter";
 
     &:hover {
         border: 1px solid var(--primary);
@@ -53,12 +54,16 @@ const BlogWrapper = styled.a`
 
 const StyledH1 = styled.h1`
     font-size: 20;
-    margin: 0.5rem auto;
+    margin-bottom: 0.5rem;
 `
 const StyledH3 = styled.h3`
     font-size: 17px;
     margin: 0.5rem auto;
     color: var(--initial-accent);
+`
+
+const StyledP = styled.p`
+    font-size: 14px;
 `
 
 export default Blog; 

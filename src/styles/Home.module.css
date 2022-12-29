@@ -179,6 +179,7 @@
 
 .biglogo {
   border-radius: 5px;
+  border: 4px solid var(--initial-accent);
 }
 
 .biglogo:hover {

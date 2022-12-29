@@ -211,7 +211,7 @@ const Mission = () => {
 }
 
 const SectionWrapper = styled(motion.div)`
-    margin: auto auto;
+    margin: 7rem auto;
 `
 
 const StyledH1 = styled.h1`
@@ -220,7 +220,7 @@ const StyledH1 = styled.h1`
 
 const BlogWrapper = styled.div`
     diplay: flex;
-    margin: auto;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(25%, auto));
 `
