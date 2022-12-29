@@ -211,7 +211,7 @@ const Mission = () => {
 }
 
 const SectionWrapper = styled(motion.div)`
-    margin: 10rem auto;
+    margin: auto auto;
 `
 
 const StyledH1 = styled.h1`
