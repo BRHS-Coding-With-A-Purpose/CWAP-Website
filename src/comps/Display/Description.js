@@ -83,13 +83,13 @@ const Description = () => {
                     backSpeed={100}
                     loop
                 />*/
-
+/*
 const StyledTyping = styled(Typed)`
     color: var(--initial-accent);
     font-size: 70px;
     margin-right: auto;
     margin-left: 1rem;
-`
+`*/
 const StyledTitle = styled(motion.h1)`
     font-size: 70px;
     margin-right: 14rem;
