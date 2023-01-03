@@ -28,9 +28,9 @@
   --gray: rgb(30, 30, 30); 
   --grayval: 38,38,38;
   --primary: rgb(200, 13, 169);
-  --secondary: rgb(48, 7, 200);
+  --initial-accent: rgb(68, 74, 198);
   --tertiary: rgb(248, 0, 223);
-  --initial-accent: rgb(0, 194, 252);
+  --secondary: rgb(0, 194, 252);
   --accent: white;
   --magenta: rgba(0, 0, 255, 0.5);
 
