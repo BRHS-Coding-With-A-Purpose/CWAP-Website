@@ -70,9 +70,6 @@ const Home = () => {
         <ParallaxLayer offset={2 + matches.small} speed={0.5}>
           <AboutUs/>
         </ParallaxLayer>
-        <ParallaxLayer offset={2.2 + matches.small} speed={0.5}>
-          <Footer/>
-        </ParallaxLayer>
       </Parallax>    
       )}
     </Media>
