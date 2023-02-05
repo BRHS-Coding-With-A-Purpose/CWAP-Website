@@ -58,22 +58,24 @@ const Description = () => {
                 <Logo width={320} height={320} className={styles.biglogowrapper} biglogo/>
             </motion.div>
             <TitleWrapper variants={Title} className={styles.title}>
-                <StyledIndent>
-                {'>'}
-                </StyledIndent>
-                <StyledTyping
-                    strings={[
-                        "Coding",
-                        "Learning",
-                        "Tinkering",
-                        "Designing",
-                        "Thinking",
-                        "Growing",
-                    ]}
-                    typeSpeed={150}
-                    backSpeed={100}
-                    loop
-                />
+                <StyledDiv>
+                    <StyledIndent>
+                    {'>'}
+                    </StyledIndent>
+                    <StyledTyping
+                        strings={[
+                            "Coding",
+                            "Learning",
+                            "Tinkering",
+                            "Designing",
+                            "Thinking",
+                            "Growing",
+                        ]}
+                        typeSpeed={150}
+                        backSpeed={100}
+                        loop
+                    />
+                </StyledDiv>
                 <StyledTitle>
                 With A Purpose
                 </StyledTitle>
@@ -82,8 +84,14 @@ const Description = () => {
     );
 }
 
+const StyledDiv = styled.div`
+    display: flex;
+    margin: 2rem;
 
-
+    @media all and (max-width: 1200px) {
+        margin-left: 25%;
+    }
+`
 
 const StyledTyping = styled(Typed)`
     color: var(--initial-accent);
@@ -93,8 +101,12 @@ const StyledTyping = styled(Typed)`
 `
 const StyledTitle = styled(motion.h1)`
     font-size: 70px;
-    margin-right: 14rem;
+    margin-right: 13rem;
     margin-left: auto;
+
+    @media all and (max-width: 1200px) {
+        margin-right: -3rem;
+    }
 `
 
 const StyledIndent= styled(motion.h1)`
@@ -103,20 +115,29 @@ const StyledIndent= styled(motion.h1)`
 `
 
 const TitleWrapper = styled(motion.div)`
-    display: flex;
+
     width: 1200px;
     max-width: 90%;
     margin-top: 340px;
     margin-bottom: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
     font-size: 100px;
+    padding: 1rem;
     text-align: center;
-    padding: 1rem;`
+
+    @media all and (min-width: 1200px) {
+        display: flex;
+    }
+
+    @media all and (max-width: 1200px) {
+        margin-top: 0px;
+    }
+`
 
 const DescriptionWrapper = styled(motion.div)`
-    display: flex;
+
+    @media all and (min-width: 1200px) {
+        display: flex;
+    }
 `
 
 export default Description;

@@ -43,10 +43,7 @@ const ContactUs = () => {
     return(
         <Parallax pages={1.25} className={styles.parallax}>
             <ParallaxLayer factor={1} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
-            <ParallaxLayer factor={0.5}>
-                <NavBar/>
-            </ParallaxLayer>
-            <ParallaxLayer factor={0.8} offset={0.3}>
+            <ParallaxLayer factor={1}>
                 <OfficerGrid>
                     
                     {contacts.map((el) => {
@@ -86,6 +83,9 @@ const ContactUs = () => {
 
                 </OfficerGrid>
             </ParallaxLayer>
+            <ParallaxLayer factor={0.1}>
+                <NavBar/>
+            </ParallaxLayer>
             <ParallaxLayer factor={0.1} offset={1.15}>
                 <Footer/>
             </ParallaxLayer>
@@ -102,18 +102,11 @@ const AboutDescription = styled.div`
     margin-right: auto;
 `
 
-/*    width: 1500px;
-    top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    max-width: 100%;
-    border: 2px solid var(--tile-border); */ 
-
 const OfficerGrid = styled.div`
     width: 1500px;
-    margin-left: auto;
+    margin-top: 12rem;
     margin-right: auto;
+    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(25%, auto));
     max-width: 90%;
@@ -122,7 +115,7 @@ const OfficerGrid = styled.div`
     @media all and (max-width: 1200px) {
 
         width: 1500px;
-        top: 10rem;
+        margin-top: 5rem;
         margin-left: auto;
         margin-right: auto;
         display: grid;

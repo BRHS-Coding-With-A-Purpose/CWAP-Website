@@ -15,6 +15,7 @@ import { motion } from 'framer-motion'
 import AboutUs from '../comps/Display/AboutUs'
 import { AiOutlinePhone, AiFillCode, AiOutlineLike, AiFillFileText } from 'react-icons/ai'
 import Mission from '../comps/Display/Mission'
+import styled from 'styled-components'
 
 const grid = [
   {
@@ -76,7 +77,6 @@ const Home = () => {
     </>
   )
 }
-
 
 Home.getLayout = function getLayout(page) {
   return (

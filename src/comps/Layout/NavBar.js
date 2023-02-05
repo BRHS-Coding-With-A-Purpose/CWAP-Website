@@ -4,7 +4,7 @@ import Logo from '../Display/Logo'
 import Link from 'next/link'
 import { useState }  from 'react'
 
-const pages = [["Leadership", "/Leadership", 0], ["Contact Us", "/ContactUs", 1], ["Projects", "/Projects", 2], ["Blog", "/Blog", 3]]
+const pages = [["Leadership", "/Leadership", 0], ["Contact", "/ContactUs", 1], ["Projects", "/Projects", 2], ["Blog", "/Blog", 3]]
 
 const isMotion = (Motion, page) => {
 
