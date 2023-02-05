@@ -150,9 +150,6 @@ const BottomAnimation = (bottomInView) => {
     })
 }
 
-
-
-
 const Mission = () => {
 
     const ref = useRef(null)
@@ -170,7 +167,7 @@ const Mission = () => {
                     </Displaybox>
                 </motion.div>
                 <motion.div variants={PictureAnimation(isInView)} initial="hidden" animate="visible">
-                    <Displaybox title="This is a picture of us" src='/ClubPicture.png' width={300} height={200}>
+                    <Displaybox title="This is a picture of us" src='/ClubPicture.png' width={300} height={200} flexbox={true}>
                         Trust us we are cool people. We just dont have the budget for a camera.
                     </Displaybox>
                 </motion.div>
@@ -190,8 +187,8 @@ const Mission = () => {
                             <Blog title="Weather App" author="Alan Jiang" date="12/29/22">
                                 CWAP continues to work on Weather App
                             </Blog>
-                            <Blog title="Stuff" author="Alan Jiang" date="12/29/22">
-                                CWAP Holds Christmas Festivities
+                            <Blog title="Recruitment" author="Alan Jiang" date="12/29/22">
+                                CWAP Plans on recruiting new members
                             </Blog>
                     </BlogWrapper>
                     <StyledH1>
@@ -219,10 +216,14 @@ const StyledH1 = styled.h1`
 `
 
 const BlogWrapper = styled.div`
-    diplay: flex;
     margin-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(25%, auto));
+
+    @media all and (max-width: 600px) {
+        margin: auto;
+        grid-template-columns: repeat(1, minmax(80%, auto));
+    }
 `
 
 const StyledMission = styled(motion.div)`

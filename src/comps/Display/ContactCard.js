@@ -44,6 +44,9 @@ const StyledImage = styled(Image)`
     border-radius: 10px;
     border: 1px solid var(--gray);
 
+    @media all and (max-width: 600px) {
+      margin: 0rem;
+    }
 `
 
 
@@ -61,7 +64,6 @@ export const ContentWrapper = styled.div`
     }
 
     @media all and (max-width: 1200px) {
-
         width: 350px;
         margin: 1rem 1.2rem;
         display: grid;
@@ -72,6 +74,7 @@ export const ContentWrapper = styled.div`
     @media all and (max-width: 600px) {
 
       width: 320px;
+      height: 300px;
       margin: 1rem 1.2rem;
       display: grid;
       grid-template-columns: repeat(2, minmax(-5%, auto));

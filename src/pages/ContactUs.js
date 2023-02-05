@@ -79,8 +79,6 @@ const ContactUs = () => {
                         </ContactCard>
                         )
                     })}
-
-
                 </OfficerGrid>
             </ParallaxLayer>
             <ParallaxLayer factor={0.1}>
@@ -113,15 +111,14 @@ const OfficerGrid = styled.div`
     border: 2px solid var(--tile-border); 
 
     @media all and (max-width: 1200px) {
-
-        width: 1500px;
         margin-top: 5rem;
         margin-left: auto;
         margin-right: auto;
-        display: grid;
         grid-template-columns: repeat(2, minmax(25%, auto));
-        max-width: 90%;
-        border: 2px solid var(--tile-border); 
+    }
+
+    @media all and (max-width: 600px) {
+        margin-right: 2rem;
     }
 
 `
@@ -133,6 +130,5 @@ ContactUs.getLayout = function getLayout(page) {
       </ParallaxProvider>
     )
 }
-  
 
 export default ContactUs;

@@ -247,7 +247,10 @@
     margin: auto 7px;
   }
 
-
+  .biglogowrapper {
+    margin-top: 5rem;
+    margin-left: 12%;
+  }
 }
 
 

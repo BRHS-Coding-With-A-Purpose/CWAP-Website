@@ -91,6 +91,10 @@ const StyledDiv = styled.div`
     @media all and (max-width: 1200px) {
         margin-left: 25%;
     }
+
+    @media all and (max-width: 600px) {
+        margin-left: 7%;
+    }
 `
 
 const StyledTyping = styled(Typed)`
@@ -101,6 +105,7 @@ const StyledTyping = styled(Typed)`
 `
 const StyledTitle = styled(motion.h1)`
     font-size: 70px;
+    margin-top: 2.5rem;
     margin-right: 13rem;
     margin-left: auto;
 

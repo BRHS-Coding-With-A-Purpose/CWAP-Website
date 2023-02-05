@@ -3,6 +3,7 @@ import { useRef } from "react"
 import Displaybox from "./Displaybox"
 import styles from '../../styles/Home.module.css'
 import Footer from "../Layout/Footer"
+import styled from "styled-components"
 import { AiOutlinePhone, AiFillCode, AiOutlineLike, AiFillFileText } from 'react-icons/ai'
 
 const grid = [
@@ -47,7 +48,7 @@ const AboutUs = () => {
 
     return(
         <>
-            <motion.div 
+          <StyledMotion
             ref={ref}
             style={{
                 transform: isInView ? "none" : "translateY(200px)",
@@ -66,16 +67,19 @@ const AboutUs = () => {
                     Icon={el.image}
                     key={el.title}
                     variants={DisplayboxAnimation}
-                    whileHover="hover">
+                    whileHover="hover"
+                    flexbox={false}>
                     {el?.description}
                 </Displaybox>
             )}
-
             </div>
-        </motion.div>
-        <Footer/>
+        </StyledMotion>
       </>
     )
 }
+
+const StyledMotion = styled(motion.div)`
+  margin-bottom: 2rem;
+`
 
 export default AboutUs;

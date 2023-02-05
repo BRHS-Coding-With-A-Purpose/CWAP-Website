@@ -82,108 +82,102 @@ const About = () => {
             large: "(min-width: 600px)"
         }}>
 
-            {matches => (
-        <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
-            <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
-            <ParallaxLayer factor={0.5}>
-                <NavBar Motion/>
-            </ParallaxLayer>
-            <ParallaxLayer factor={1} offset={0.3}>
-                <motion.div variants={BoardAnimate} initial="hidden" animate="visible">
+        {matches => (
+            <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
+                <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
+                <ParallaxLayer factor={0.5}>
+                    <NavBar Motion/>
+                </ParallaxLayer>
+                <ParallaxLayer factor={1} offset={0.3}>
+                    <motion.div variants={BoardAnimate} initial="hidden" animate="visible">
+                        <AboutDescription>
+                            <h1 className={styles.topdescription}>
+                                Leadership
+                            </h1>
+                        </AboutDescription>
+                        <OfficerGrid>
+
+                        {officers.map((el) => {
+
+                        if (!(selectedOfficer == el.name))
+                            return (
+                            <Displaybox 
+                                title={el.name} 
+                                position={el.position} 
+                                href={`/About/${el.name}`} 
+                                src={el.image} size={175} 
+                                key={el.name}
+                                onMouseEnter={() => setSelectedOfficer(el.name)}
+                            >
+                                {el?.description}
+                            </Displaybox>
+                            )
+                        else 
+                            return(
+                            <Displaybox 
+                                title={el.name} 
+                                position={el.position} 
+                                href={`/Leadership/${el.name}`} 
+                                src={el.image} size={175} 
+                                key={el.name}
+                                onMouseLeave={() => setSelectedOfficer(null)}
+                                animate={{
+                                    scale: [1, 1.25, 1.25 , 1, 1],
+                                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                                }}
+                            >
+                                {el?.description}
+                            </Displaybox>
+                            )
+                        })}
+                        </OfficerGrid>
+                    </motion.div>
+                </ParallaxLayer>
+                <ParallaxLayer factor={0.5} offset={1.1 + matches.small*(increase+0.1)}>
                     <AboutDescription>
                         <h1 className={styles.topdescription}>
-                            Leadership
+                            Alumni
                         </h1>
                     </AboutDescription>
                     <OfficerGrid>
-
-                    {officers.map((el) => {
-
-                    if (!(selectedOfficer == el.name))
-                        return (
-                        <Displaybox 
-                            title={el.name} 
-                            position={el.position} 
-                            href={`/About/${el.name}`} 
-                            src={el.image} size={175} 
-                            key={el.name}
-                            onMouseEnter={() => setSelectedOfficer(el.name)}
-                        >
-                            {el?.description}
-                        </Displaybox>
-                        )
-                    else 
-                        return(
-                        <Displaybox 
-                            title={el.name} 
-                            position={el.position} 
-                            href={`/Leadership/${el.name}`} 
-                            src={el.image} size={175} 
-                            key={el.name}
-                            onMouseLeave={() => setSelectedOfficer(null)}
-                            animate={{
-                                scale: [1, 1.25, 1.25 , 1, 1],
-                                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                            }}
-                        >
-                            {el?.description}
-                        </Displaybox>
-                        )
-                    })}
-
-
+                    {alumni.map((el) => {
+                        if (!(selectedAlumni == el.name))
+                            return (
+                            <Displaybox 
+                                title={el.name} 
+                                position={el.position} 
+                                href={`/About/${el.name}`} 
+                                src={el.image} size={175} 
+                                key={el.name}
+                                onMouseEnter={() => setSelectedAlumni(el.name)}
+                            >
+                                {el?.description}
+                            </Displaybox>
+                            )
+                        else 
+                            return(
+                            <Displaybox 
+                                title={el.name} 
+                                position={el.position} 
+                                href={`/About`} 
+                                src={el.image} size={175} 
+                                key={el.name}
+                                onMouseLeave={() => setSelectedAlumni(null)}
+                                animate={{
+                                    scale: [1, 1.25, 1.25 , 1, 1],
+                                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                                }}
+                            >
+                                {el?.description}
+                            </Displaybox>
+                            )
+                        })}
                     </OfficerGrid>
-                </motion.div>
-            </ParallaxLayer>
-            <ParallaxLayer factor={0.5} offset={1.1 + matches.small*(increase+0.1)}>
-                <AboutDescription>
-                    <h1 className={styles.topdescription}>
-                        Alumni
-                    </h1>
-                </AboutDescription>
-                <OfficerGrid>
-
-
-                {alumni.map((el) => {
-
-                    if (!(selectedAlumni == el.name))
-                        return (
-                        <Displaybox 
-                            title={el.name} 
-                            position={el.position} 
-                            href={`/About/${el.name}`} 
-                            src={el.image} size={175} 
-                            key={el.name}
-                            onMouseEnter={() => setSelectedAlumni(el.name)}
-                        >
-                            {el?.description}
-                        </Displaybox>
-                        )
-                    else 
-                        return(
-                        <Displaybox 
-                            title={el.name} 
-                            position={el.position} 
-                            href={`/About`} 
-                            src={el.image} size={175} 
-                            key={el.name}
-                            onMouseLeave={() => setSelectedAlumni(null)}
-                            animate={{
-                                scale: [1, 1.25, 1.25 , 1, 1],
-                                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                            }}
-                        >
-                            {el?.description}
-                        </Displaybox>
-                        )
-                    })}
-
-                </OfficerGrid>
-            </ParallaxLayer>
-            <ParallaxLayer factor={0.1} offset={1.9 + matches.small*increase}>
-                <Footer/>
-            </ParallaxLayer>
-        </Parallax>
+                </ParallaxLayer>
+                <ParallaxLayer factor={0.1} offset={1.9 + matches.small*increase}>
+                    <Footer/>
+                </ParallaxLayer>
+            </Parallax>
         )}
         </Media>
     )
