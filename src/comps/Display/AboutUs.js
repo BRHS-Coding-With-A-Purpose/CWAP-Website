@@ -79,7 +79,7 @@ const AboutUs = () => {
 }
 
 const StyledMotion = styled(motion.div)`
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 `
 
 export default AboutUs;

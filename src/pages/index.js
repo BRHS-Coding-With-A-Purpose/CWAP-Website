@@ -18,33 +18,6 @@ import Mission from '../comps/Display/Mission'
 import styled from 'styled-components'
 import Media from 'react-media'
 
-const grid = [
-  {
-    title: "About",
-    href: "/About",
-    image: AiOutlineLike,
-    description: "What is our Mission?"
-  },
-  {
-    title: "Contact Us",
-    href: "/ContactUs",
-    image: AiOutlinePhone,
-    description: "Any Questions?"
-  },
-  {
-    title: "Projects",
-    href: "/Projects",
-    image: AiFillCode,
-    description: "Cool stuff we do"
-  },
-  {
-    title: "Blog",
-    href: "/Blog",
-    image: AiFillFileText,
-    description: "Interesting articles"
-  }
-]
-
 const Home = () => {
 
   const [selected, setSelected] = useState(null);
@@ -69,6 +42,9 @@ const Home = () => {
         </ParallaxLayer>
         <ParallaxLayer offset={2 + matches.small} speed={0.5}>
           <AboutUs/>
+        </ParallaxLayer>
+        <ParallaxLayer factor={0.1} offset={3+matches.small * 1.05}>
+          <Footer/>
         </ParallaxLayer>
       </Parallax>    
       )}

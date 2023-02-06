@@ -2,9 +2,9 @@
         {
         "name": "Alan",
         "position": "Idk",
-        "description": "I do stuff",
+        "description": "I am Alan and I am Outreach Director for Coding With A Purpose. (I made this very jank website) I have been in this glorious club since 9th grade. Outside of CWAP, I am programming lead for Team 303, and I run for our school's track team.",
         "images": [
-            "/codecode.jpg",
+            "/Alan1.jpg",
             "/contactus.jpg",
             "/CWAP.png"
         ]
@@ -42,6 +42,26 @@
         {
         "name": "Aarnav",
         "position": "Project Researcher",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Mahika",
+        "position": "Former Vice President",
+        "description": "I do stuff",
+        "images": [
+            "/codecode.jpg",
+            "/contactus.jpg",
+            "/CWAP.png"
+        ]
+        },
+        {
+        "name": "Sonia",
+        "position": "Former President",
         "description": "I do stuff",
         "images": [
             "/codecode.jpg",

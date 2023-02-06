@@ -14,7 +14,7 @@ export const officers = [
     {
     name: "Alan",
     position: "Idk",
-    image: "/CWAP.png"
+    image: "/Alan1.jpg"
     },
     {
     name: "Ayush",
@@ -73,22 +73,21 @@ const About = () => {
 
     const [selectedOfficer, setSelectedOfficer] = useState(null);
     const [selectedAlumni, setSelectedAlumni] = useState(null);
-    const increase = 0.5;
-
 
     return(
         <Media queries={{
-            small: "(max-width: 599px)",
-            large: "(min-width: 600px)"
+            small: "(max-width: 600px)",
+            medium: "(max-width: 1200px) and (min-width: 601px)",
+            large: "(min-width: 1201px)"
         }}>
 
         {matches => (
-            <Parallax pages={2 + matches.small*increase} className={styles.parallax}>
-                <ParallaxLayer factor={1 + matches.small*increase} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
-                <ParallaxLayer factor={0.5}>
+            <Parallax pages={2 + matches.small * 1.75} className={styles.parallax}>
+                <ParallaxLayer factor={1 + matches.small} className={styles.top} style={{backgroundImage:'url(/goodbackground.png)', backgroundSize: 'cover'}}/>
+                <ParallaxLayer factor={0.5 - matches.small * 0.4}>
                     <NavBar Motion/>
                 </ParallaxLayer>
-                <ParallaxLayer factor={1} offset={0.3}>
+                <ParallaxLayer factor={1} offset={0.3 - matches.small * 0.1}>
                     <motion.div variants={BoardAnimate} initial="hidden" animate="visible">
                         <AboutDescription>
                             <h1 className={styles.topdescription}>
@@ -104,7 +103,7 @@ const About = () => {
                             <Displaybox 
                                 title={el.name} 
                                 position={el.position} 
-                                href={`/About/${el.name}`} 
+                                href={`/Leadership/${el.name}`} 
                                 src={el.image} size={175} 
                                 key={el.name}
                                 onMouseEnter={() => setSelectedOfficer(el.name)}
@@ -133,7 +132,7 @@ const About = () => {
                         </OfficerGrid>
                     </motion.div>
                 </ParallaxLayer>
-                <ParallaxLayer factor={0.5} offset={1.1 + matches.small*(increase+0.1)}>
+                <ParallaxLayer factor={0.5} offset={1.1 + matches.medium * 0.2 + matches.small * 1.5}>
                     <AboutDescription>
                         <h1 className={styles.topdescription}>
                             Alumni
@@ -146,7 +145,7 @@ const About = () => {
                             <Displaybox 
                                 title={el.name} 
                                 position={el.position} 
-                                href={`/About/${el.name}`} 
+                                href={`/Leadership/${el.name}`} 
                                 src={el.image} size={175} 
                                 key={el.name}
                                 onMouseEnter={() => setSelectedAlumni(el.name)}
@@ -159,7 +158,7 @@ const About = () => {
                             <Displaybox 
                                 title={el.name} 
                                 position={el.position} 
-                                href={`/About`} 
+                                href={`/Leadership/${el.name}`} 
                                 src={el.image} size={175} 
                                 key={el.name}
                                 onMouseLeave={() => setSelectedAlumni(null)}
@@ -173,8 +172,9 @@ const About = () => {
                             )
                         })}
                     </OfficerGrid>
+                    
                 </ParallaxLayer>
-                <ParallaxLayer factor={0.1} offset={1.9 + matches.small*increase}>
+                <ParallaxLayer factor={0.1} offset={1.9 + matches.small * 1.75}>
                     <Footer/>
                 </ParallaxLayer>
             </Parallax>
@@ -192,14 +192,6 @@ const AboutDescription = styled.div`
     margin-right: auto;
 `
 
-/*    width: 1500px;
-    top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    max-width: 100%;
-    border: 2px solid var(--tile-border); */ 
-
 const OfficerGrid = styled.div`
     width: 1500px;
     top: 10rem;
@@ -211,14 +203,7 @@ const OfficerGrid = styled.div`
     border: 2px solid var(--tile-border); 
 
     @media all and (max-width: 1200px) {
-        width: 1500px;
-        top: 10rem;
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
         grid-template-columns: repeat(2, minmax(25%, auto));
-        max-width: 100%;
-        border: 2px solid var(--tile-border); 
     }
 
     @media only screen and (max-width: 600px) {

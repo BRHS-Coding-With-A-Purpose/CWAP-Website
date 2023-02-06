@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import officer from '../../data/officers.json'
 import Image from 'next/image';
 import { ContentWrapper } from '../../comps/Display/ContactCard';
+import Media from "react-media";
 
 const Leadership = () => {
 
@@ -33,20 +34,26 @@ const Leadership = () => {
     }, [router.query.name, router.isReady])
     
     return(
-        <div>
-            <div className={styles.officerpage}>
-                    <Displaybox title={`${title} - ${position}`}>
-                        {description}
-                    </Displaybox>
-                <div className={styles.imggrid}>
-                    <Image src={images[0]} width={250} height={250} className={styles.gridimage}/>
-                    <Image src={images[1]} width={250} height={250} className={styles.gridimage}/>
-                    <Image src={images[2]} width={250} height={250} className={styles.gridimage}/>
+        <Media queries={{
+            small: "(max-width: 600px)",
+          }}>
+            {matches => (
+                <div>
+                    <div className={styles.officerpage}>
+                            <Displaybox title={`${title} - ${position}`}>
+                                {description}
+                            </Displaybox>
+                        <div className={styles.imggrid}>
+                            <Image src={images[0]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
+                            <Image src={images[1]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
+                            <Image src={images[2]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            )}
+
+        </Media>
     );
 }
-
 
 export default Leadership;

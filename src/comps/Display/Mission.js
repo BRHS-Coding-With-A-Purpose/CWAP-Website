@@ -195,7 +195,7 @@ const Mission = () => {
                         Projects
                     </StyledH1>
                     <BlogWrapper>
-                            <Blog title="Shitty Weather App" author="" date="12/29/22" src="/ShittyWeather.png" href="https://HTML-Tags-Example.alanjiang1.repl.co">
+                            <Blog title="Weather App" author="" date="12/29/22" src="/ShittyWeather.png" href="https://HTML-Tags-Example.alanjiang1.repl.co">
                             </Blog>
                             <Blog title="Linear Regression" author="" date="12/29/22" src="/LinearRegressionThing.png" href="https://replit.com/@HarnoorSingh4/Vaccine-prediction-data#main.py">
                             </Blog>
@@ -221,7 +221,8 @@ const BlogWrapper = styled.div`
     grid-template-columns: repeat(3, minmax(25%, auto));
 
     @media all and (max-width: 600px) {
-        margin: auto;
+        margin-right: 2rem;
+        margin-left: 2.5rem;
         grid-template-columns: repeat(1, minmax(80%, auto));
     }
 `
