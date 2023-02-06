@@ -34,25 +34,19 @@ const Leadership = () => {
     }, [router.query.name, router.isReady])
     
     return(
-        <Media queries={{
-            small: "(max-width: 600px)",
-          }}>
-            {matches => (
-                <div>
-                    <div className={styles.officerpage}>
-                            <Displaybox title={`${title} - ${position}`}>
-                                {description}
-                            </Displaybox>
-                        <div className={styles.imggrid}>
-                            <Image src={images[0]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
-                            <Image src={images[1]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
-                            <Image src={images[2]} width={200 - matches.small * 100} height={200 - matches.small * 100} className={styles.gridimage}/>
-                        </div>
-                    </div>
+        <div>
+            <div className={styles.officerpage}>
+                    <Displaybox title={`${title} - ${position}`}>
+                        {description}
+                    </Displaybox>
+                <div className={styles.imggrid}>
+                    <Image src={images[0]} width={100} height={100} className={styles.gridimage}/>
+                    <Image src={images[1]} width={100} height={100} className={styles.gridimage}/>
+                    <Image src={images[2]} width={100} height={100} className={styles.gridimage}/>
                 </div>
-            )}
+            </div>
+        </div>
 
-        </Media>
     );
 }
 

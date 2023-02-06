@@ -1,7 +1,7 @@
 [
         {
         "name": "Alan",
-        "position": "Idk",
+        "position": "Outreach Person",
         "description": "I am Alan and I am Outreach Director for Coding With A Purpose. (I made this very jank website) I have been in this glorious club since 9th grade. Outside of CWAP, I am programming lead for Team 303, and I run for our school's track team.",
         "images": [
             "/Alan1.jpg",
@@ -22,9 +22,9 @@
         {
         "name": "Alexander",
         "position": "Code Developer",
-        "description": "I do stuff",
+        "description": "My name is Alexander and I am in charge of managing our projects and helping teach the club members. I have been interested in programming for many years, and this club has been a great opportunity for me to share my knowledge and help impactful coding projects get made. In my free time I work on electronics projects and bike in nature.",
         "images": [
-            "/codecode.jpg",
+            "/Alexander.png",
             "/contactus.jpg",
             "/CWAP.png"
         ]
@@ -34,7 +34,7 @@
         "position": "Code Developer",
         "description": "I do stuff",
         "images": [
-            "/codecode.jpg",
+            "/Ethan.jpg",
             "/contactus.jpg",
             "/CWAP.png"
         ]
@@ -42,9 +42,9 @@
         {
         "name": "Aarnav",
         "position": "Project Researcher",
-        "description": "I do stuff",
+        "description": "Hello everyone! My name is Arnav Dedhia and I am an officer in coding with a purpose.    Last year, when I joined the club, I learned many new coding concepts. Even now, this club helps me learn all of the many different sides of coding. Outside of school, I swim on a club team and on the brhs swim team. Also, I enjoy hanging out with my friends",
         "images": [
-            "/codecode.jpg",
+            "/Aarnav.jpg",
             "/contactus.jpg",
             "/CWAP.png"
         ]

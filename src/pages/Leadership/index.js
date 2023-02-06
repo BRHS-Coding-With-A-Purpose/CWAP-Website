@@ -24,17 +24,17 @@ export const officers = [
     {
     name: "Alexander",
     position: "Code Developer",
-    image: "/CWAP.png"
+    image: "/Alexander.png"
     },
     {
     name: "Ethan",
     position: "Code Developer",
-    image: "/CWAP.png"
+    image: "/Ethan.jpg"
     },
     {
     name: "Aarnav",
     position: "Project Researcher",
-    image: "/CWAP.png"
+    image: "/Aarnav.jpg"
     },
     {
     name: "???",
