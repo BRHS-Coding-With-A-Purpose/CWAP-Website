@@ -13,7 +13,7 @@ import Media from 'react-media'
 export const officers = [
     {
     name: "Alan",
-    position: "Idk",
+    position: "Outreach Person",
     image: "/Alan1.jpg"
     },
     {
