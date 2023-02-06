@@ -11,7 +11,7 @@ import FullDisplay from "../comps/Display/FullDisplay"
 
 const projects = [
     {
-        name: "Shitty Weather App",
+        name: "Weather App",
         description: "(Actually works)",
         link: "https://HTML-Tags-Example.alanjiang1.repl.co",
         icon: "/ShittyWeather.png"
@@ -121,8 +121,6 @@ const OfficerGrid = styled.div`
     @media all and (max-width: 600px) {
         margin-right: 2rem;
     }
-
-
 `
 
 Projects.getLayout = function getLayout(page) {
@@ -132,6 +130,5 @@ Projects.getLayout = function getLayout(page) {
       </ParallaxProvider>
     )
 }
-  
 
 export default Projects;
