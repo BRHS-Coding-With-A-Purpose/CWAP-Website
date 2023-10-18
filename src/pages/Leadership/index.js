@@ -13,7 +13,7 @@ import Media from 'react-media'
 export const officers = [
     {
     name: "Alan",
-    position: "Outreach Person",
+    position: "Vice President",
     image: "/Alan1.jpg"
     },
     {
@@ -23,7 +23,7 @@ export const officers = [
     },
     {
     name: "Alexander",
-    position: "Code Developer",
+    position: "Vice President",
     image: "/Alexander.png"
     },
     {
@@ -32,9 +32,9 @@ export const officers = [
     image: "/Ethan.jpg"
     },
     {
-    name: "Aarnav",
-    position: "Project Researcher",
-    image: "/Aarnav.jpg"
+    name: "Isaac",
+    position: "Vice President",
+    image: "/CWAP.png"
     },
     {
     name: "???",
