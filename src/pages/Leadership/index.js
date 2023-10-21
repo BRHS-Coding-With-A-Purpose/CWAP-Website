@@ -12,30 +12,30 @@ import Media from 'react-media'
 
 export const officers = [
     {
-    name: "Alan",
-    position: "Vice President",
-    image: "/Alan1.jpg"
-    },
-    {
     name: "Ayush",
     position: "President",
     image: "/Officers/Ayush.jpg"
     },
+    {
+        name: "Alan",
+        position: "Vice President",
+        image: "/Alan1.jpg"
+        },
     {
     name: "Alexander",
     position: "Vice President",
     image: "/Alexander.png"
     },
     {
-    name: "Ethan",
-    position: "Code Developer",
-    image: "/Ethan.jpg"
-    },
-    {
     name: "Isaac",
     position: "Vice President",
-    image: "/CWAP.png"
+    image: "/Isaac.jpg"
     },
+    {
+        name: "Ethan",
+        position: "Code Developer",
+        image: "/Ethan.jpg"
+        },
     {
     name: "???",
     position: "New Officer?",
